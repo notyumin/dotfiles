@@ -77,6 +77,8 @@ set updatetime=500
 " F2 to rename symbol
 nmap <F2> <Plug>(coc-rename)
 
+" Alt+G to open Flog (Git Graph)
+nmap <A-g> :Flog<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Indent
