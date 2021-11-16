@@ -8,9 +8,10 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'APZelos/blamer.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'rbong/vim-flog'
-Plug 'ap/vim-css-color'
 
 call plug#end()
+
+let g:coc_global_extensions = ['coc-go', 'coc-tsserver', 'coc-highlight']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Cosmetics
@@ -29,6 +30,10 @@ require'lualine'.setup{
     }
 }
 END
+
+" Highlight Symbol
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text Editing
@@ -56,6 +61,21 @@ let g:blamer_show_in_insert_modes = 0 "Disable blamer in Insert Mode
 
 " Ignore case when searching
 set ignorecase
+
+" Set Enter Key to confirm completion
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Use CoC GoTo
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Makes CursorHold faster (for Coc-Highlight)
+set updatetime=500
+
+" F2 to rename symbol
+nmap <F2> <Plug>(coc-rename)
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
