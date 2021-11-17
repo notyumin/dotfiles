@@ -8,6 +8,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'APZelos/blamer.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'rbong/vim-flog'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
