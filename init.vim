@@ -9,6 +9,12 @@ Plug 'APZelos/blamer.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'rbong/vim-flog'
 Plug 'jiangmiao/auto-pairs'
+Plug 'Yggdroot/indentLine'
+if has('nvim') || has('patch-8.0.902')
+    Plug 'mhinz/vim-signify'
+else
+    Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+endif
 
 call plug#end()
 
@@ -73,7 +79,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Makes CursorHold faster (for Coc-Highlight)
-set updatetime=500
+set updatetime=150
 
 " F2 to rename symbol
 nmap <F2> <Plug>(coc-rename)
@@ -92,6 +98,7 @@ function! s:show_documentation()
         execute '!' . &keywordprg . " " . expand('<cword>')
     endif
 endfunction
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Indent
