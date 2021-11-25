@@ -15,10 +15,11 @@ if has('nvim') || has('patch-8.0.902')
 else
     Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
 endif
+Plug 'yamatsum/nvim-cursorline' 
 
 call plug#end()
 
-let g:coc_global_extensions = ['coc-go', 'coc-tsserver', 'coc-highlight']
+let g:coc_global_extensions = ['coc-go', 'coc-tsserver']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Cosmetics
@@ -37,9 +38,6 @@ require'lualine'.setup{
     }
 }
 END
-
-" Highlight Symbol
-autocmd CursorHold * silent call CocActionAsync('highlight')
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -98,6 +96,10 @@ function! s:show_documentation()
         execute '!' . &keywordprg . " " . expand('<cword>')
     endif
 endfunction
+
+" Use `[g` and `]g` to navigate coc-diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
