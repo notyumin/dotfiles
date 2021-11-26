@@ -16,6 +16,7 @@ else
     Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
 endif
 Plug 'yamatsum/nvim-cursorline' 
+Plug 'ap/vim-css-color' 
 
 call plug#end()
 
