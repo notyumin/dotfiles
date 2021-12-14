@@ -17,6 +17,7 @@ else
 endif
 Plug 'yamatsum/nvim-cursorline' 
 Plug 'ap/vim-css-color' 
+Plug 'psliwka/vim-smoothie'
 
 call plug#end()
 
