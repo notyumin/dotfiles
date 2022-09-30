@@ -21,7 +21,7 @@ Plug 'psliwka/vim-smoothie'
 
 call plug#end()
 
-let g:coc_global_extensions = ['coc-go', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-go', 'coc-tsserver', 'coc-pyright']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Cosmetics
@@ -46,8 +46,12 @@ END
 " => Text Editing
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " To navigate autocomplete with <Tab> and <S-Tab>
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <silent><expr> <Tab> 
+    \ coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
+
+" Set Enter Key to confirm completion
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>" 
 
 " Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -68,9 +72,6 @@ let g:blamer_show_in_insert_modes = 0 "Disable blamer in Insert Mode
 
 " Ignore case when searching
 set ignorecase
-
-" Set Enter Key to confirm completion
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Use CoC GoTo
 nmap <silent> gd <Plug>(coc-definition)
