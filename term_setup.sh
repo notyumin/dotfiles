@@ -1,6 +1,7 @@
 #! /usr/bin/bash
 
 apt update && apt upgrade -y
+cd
 
 # zsh
 apt install zsh
@@ -25,6 +26,11 @@ ln -s /squashfs-root/AppRun /usr/bin/nvim
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 nvim +PackerSync
 
+# lazygit
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep '"tag_name":' |  sed -E 's/.*"v*([^"]+)".*/\1/')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
+
 # Git credentials
 git config --global credential.helper store
 git config --global user.name "notyumin"
@@ -46,7 +52,7 @@ then
   sudo apt install python3
 fi
 
-read -p "Install NodeJS? " -r
+read -p "Install Nvm/NodeJS? " -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
