@@ -25,6 +25,11 @@ ln -s /squashfs-root/AppRun /usr/bin/nvim
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 nvim +PackerSync
 
+# Git credentials
+git config --global credential.helper store
+git config --global user.name "notyumin"
+git config --global user.email "notyumin@gmail.com"
+
 # ~~ Languages ~~
 read -p "Install Golang? " -r
 if [[ $REPLY =~ ^[Yy]$ ]]
