@@ -1,12 +1,17 @@
 #! /usr/bin/bash
 
+# check for sudo
+if [ $EUID != 0 ]; then
+  sudo "$0"
+  exit
+fi
+
 apt update && apt upgrade -y
-cd
 
 # zsh
 apt install zsh
 # Set zsh as main shell
-chsh -s zsh
+chsh -s $(which zsh)
 
 # P10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
