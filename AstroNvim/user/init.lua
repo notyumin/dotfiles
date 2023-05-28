@@ -1,0 +1,1 @@
+/home/allinav/dotfiles/AstroNvim/init.lua
