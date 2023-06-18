@@ -20,7 +20,10 @@ return {
       lazy = false
     },
   {
-    'ellisonleao/glow.nvim'
+    'ellisonleao/glow.nvim',
+    config = true,
+    cmd = "Glow",
+    ft = {"markdown"}
   },  
   {
     'Mofiqul/dracula.nvim'
@@ -28,4 +31,9 @@ return {
   {
     'folke/tokyonight.nvim'
   },  
+  { 
+    "catppuccin/nvim", 
+    name = "catppuccin", 
+    priority = 1000 
+  },
 }
