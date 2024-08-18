@@ -9,10 +9,10 @@ Dots managed by [GNU Stow](https://www.gnu.org/software/stow/)
 
 # Installation
 
-Just clone this repo into your home directory and run
+Just clone this repo into your home directory, cd in and run `stow` on what you want to install, for example:
 
 ```
-stow .
+stow ./Shell
 ```
 
 This symlinks all the files in this repo to your machine
@@ -20,13 +20,13 @@ This symlinks all the files in this repo to your machine
 If you see the following error
 
 ```
-WARNING! stowing . would cause conflicts:
+WARNING! stowing ./Shell would cause conflicts:
 ...
 ```
 
 Instead run
 ```
-stow . --adopt
+stow ./Shell --adopt
 ```
 This will move any conflicting files into this repo before symlinking.
 From there, either:
