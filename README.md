@@ -36,6 +36,20 @@ OR
 
 2. `git commit` if you want to keep the file originally on your machine.
 
+# Dependencies
+Here's a list of things you have to install for my config to work:
+
+- zsh
+- zsh-autosuggestions
+- Oh My Posh
+- zoxide
+- fzf
+- asdf
+- Neovimz
+- tmux
+- tpm
+- Wezterm
+- lazygit
 
 # References
 
