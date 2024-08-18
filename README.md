@@ -3,7 +3,7 @@
 - Editor: Neovim with [LazyVim](https://github.com/LazyVim/LazyVim)
 - Shell: zsh with [Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh)
 - Terminal: [Wezterm](https://github.com/wez/wezterm) with tmux
-- WM: [Yabai](https://github.com/koekeishiya/yabai)
+- WM: [Aerospace](https://github.com/nikitabobko/AeroSpace)
 
 Dots managed by [GNU Stow](https://www.gnu.org/software/stow/)
 
@@ -55,5 +55,5 @@ Here's a list of things you have to install for my config to work:
 
 - [Setting up Stow](https://www.youtube.com/watch?v=y6XCebnB9gs)
 - [Setting up tmux](https://www.youtube.com/watch?v=DzNmUNvnB04&t=138s)
-- [Setting up yabai](https://www.youtube.com/watch?v=k94qImbFKWE)
+- [Setting up Aerospace](https://www.josean.com/posts/how-to-setup-aerospace-tiling-window-manager)
 - [Setting up Oh My Posh](https://www.youtube.com/watch?v=9U8LCjuQzdc)
