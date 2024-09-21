@@ -10,6 +10,8 @@ config.color_scheme = "Catppuccin Macchiato"
 
 config.enable_tab_bar = false
 
+config.font_size = 15
+
 -- config.default_domain = "WSL:Ubuntu"
 
 -- and finally, return the configuration to wezterm
