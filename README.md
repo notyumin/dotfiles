@@ -45,6 +45,7 @@ Here's a list of things you have to install for the config to work properly
 - Oh My Posh
 - zoxide
 - fzf
+- eza
 - asdf
 - Neovim
 - tmux
