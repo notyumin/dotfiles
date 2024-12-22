@@ -12,21 +12,21 @@ Dots managed by [GNU Stow](https://www.gnu.org/software/stow/)
 Just clone this repo into your home directory, cd in and run `stow` on what you want to install, for example:
 
 ```
-stow ./Shell
+stow Shell
 ```
 
-This symlinks all the files in this repo to your machine
+This symlinks all the files in the "Shell" directory to your machine
 
 If you see the following error
 
 ```
-WARNING! stowing ./Shell would cause conflicts:
+WARNING! stowing Shell would cause conflicts:
 ...
 ```
 
 Instead run
 ```
-stow ./Shell --adopt
+stow Shell --adopt
 ```
 This will move any conflicting files into this repo before symlinking.
 From there, either:
@@ -53,10 +53,12 @@ Here's a list of things you have to install for the config to work properly
 - Wezterm
 - lazygit
 - GNU Stow
+- Yazi
 
 # References
 
 - [Setting up Stow](https://www.youtube.com/watch?v=y6XCebnB9gs)
-- [Setting up tmux](https://www.youtube.com/watch?v=DzNmUNvnB04&t=138s)
+- [Setting up tmux](https://www.youtube.com/watch?v=DzNmUNvnB04)
 - [Setting up Aerospace](https://www.josean.com/posts/how-to-setup-aerospace-tiling-window-manager)
 - [Setting up Oh My Posh](https://www.youtube.com/watch?v=9U8LCjuQzdc)
+- [Setting up Yazi](https://www.youtube.com/watch?v=iKb3cHDD9hw)
