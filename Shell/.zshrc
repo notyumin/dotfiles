@@ -7,13 +7,18 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Aliases
 alias ls="eza --icons=always"
 
-# zoxide and oh-my-posh
+# zoxide, oh-my-posh
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(oh-my-posh init zsh)"
 eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/nordtron.omp.json')"
+eval $(thefuck --alias)
 
 # Set up fzf key bindings and fuzzy completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Case-insensitive Completion https://superuser.com/questions/1092033/how-can-i-make-zsh-tab-completion-fix-capitalization-errors-for-directories-and
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' # case-insensitive matching only if there are no case-sensitive matches
+
 # Start asdf
 . "$HOME/.asdf/asdf.sh"
+
