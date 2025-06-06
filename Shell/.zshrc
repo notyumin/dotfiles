@@ -9,7 +9,7 @@ alias ls="eza --icons=always"
 
 # zoxide, oh-my-posh
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(oh-my-posh init zsh --config './.config/omp/nordtron.omp.json')"
+eval "$(oh-my-posh init zsh --config '~/.config/omp/nordtron.omp.json')"
 eval $(thefuck --alias)
 
 # Set up fzf key bindings and fuzzy completion
