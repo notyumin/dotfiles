@@ -1,6 +1,9 @@
 # Environment Variables
 export PATH=$PATH:/usr/local/go/bin:/home/allinav/.local/bin
 
+# Vi mode
+source $HOME/.zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
 # Zsh autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 

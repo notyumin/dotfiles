@@ -44,6 +44,7 @@ Here's a list of things you have to install for the config to work properly
    | [Git](https://git-scm.com/install/) | Used to install many packages
    | [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) | My shell of choice |
    | [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md) | Fish-like suggestions for zsh |
+   | [zsh-vi-mode](https://github.com/jeffreytse/zsh-vi-mode?tab=readme-ov-file#%EF%B8%8F-installation) | Better vi mode for zsh |
    | [Oh My Posh](https://ohmyposh.dev/docs/installation/macos) | Prompt Engine |
    | [zoxide](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation) | Better cd |
    | [fzf](https://github.com/junegunn/fzf#installation) | Fuzzy finder, needed for many other packages |
