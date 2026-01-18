@@ -1,11 +1,12 @@
 # Environment Variables
-export PATH=$PATH:/usr/local/go/bin:/home/allinav/.local/bin
+export PATH=$PATH:/usr/local/go/bin:/home/allinav/.local/bin:$ASDF_DATA_DIR/shims
 
 # Vi mode
 source $HOME/.zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
-# Zsh autosuggestions
+# Zsh autosuggestions and syntax highlighting
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Aliases
 alias ls="eza --icons=always"
