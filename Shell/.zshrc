@@ -1,5 +1,6 @@
 # Environment Variables
-export PATH=$PATH:/usr/local/go/bin:/home/allinav/.local/bin:$ASDF_DATA_DIR/shims
+export ASDF_DATA_DIR=/home/allinav/.asdf
+export PATH=$ASDF_DATA_DIR/shims:$PATH:/usr/local/go/bin:~/.local/bin:~/go/bin
 
 # Vi mode
 source $HOME/.zsh-vi-mode/zsh-vi-mode.plugin.zsh
@@ -23,9 +24,6 @@ eval $(thefuck --alias)
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' # case-insensitive matching only if there are no case-sensitive matches
 
-# Start asdf
-. "$HOME/.asdf/asdf.sh"
-
 # Yazi cd on exit
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -34,3 +32,5 @@ function yy() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+[ -f "/home/allinav/.ghcup/env" ] && . "/home/allinav/.ghcup/env" # ghcup-env
