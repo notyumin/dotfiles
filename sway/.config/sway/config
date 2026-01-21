@@ -76,6 +76,7 @@ input type:keyboard {
 }
 
 ### Styling
+gaps outer 4
 gaps inner 1
 default_border pixel 4
 
