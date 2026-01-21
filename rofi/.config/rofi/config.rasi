@@ -1,0 +1,56 @@
+@import "catppuccin-frappe"
+
+entry {
+    placeholder: "";
+    text-color: @text;
+    padding: 8px 0 8px 8px;
+}
+
+configuration {
+  show-icons: true;
+  font: "JetBrainsMonoNerdFontMono 12";
+}
+
+inputbar {
+    children: [entry];
+}
+
+* {
+    separatorcolor: transparent;
+    selected-normal-background: rgba(255,255,255, 5%);
+    normal-background: rgba(255,255,255, 0%);
+    alternate-normal-background: rgba(255,255,255, 0%);
+}
+
+mainbox {
+    padding: 10px;
+}
+
+window {
+    border: 2px solid;
+    border-color: @text;
+    background-color: rgba(36, 39, 58, 0.85);
+    padding: 0px;
+    width: 30%;
+}
+
+
+listview {
+    lines: 10;
+}
+
+element {
+    padding: 10px 10px;
+    height: 50px;
+    children: [ element-icon, element-text ];
+}
+
+element-text {
+    text-color: @text;
+}
+
+#scrollbar {
+    handle-color: @base;
+    handle-width: 4px ;
+    padding: 0;
+}
