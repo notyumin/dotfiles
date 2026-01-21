@@ -2,8 +2,8 @@
 
 - Editor: Neovim with [LazyVim](https://github.com/LazyVim/LazyVim)
 - Shell: zsh with [Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh)
-- Terminal: [Wezterm](https://github.com/wez/wezterm) with tmux
-- WM: [Aerospace](https://github.com/nikitabobko/AeroSpace)
+- Terminal: [Wezterm](https://github.com/wez/wezterm) and Foot
+- WM: Sway (on Fedora machine)
 
 Dots managed by [GNU Stow](https://www.gnu.org/software/stow/)
 
@@ -12,21 +12,21 @@ Dots managed by [GNU Stow](https://www.gnu.org/software/stow/)
 Just clone this repo into your home directory, cd in and run `stow` on what you want to install, for example:
 
 ```
-stow Shell
+stow zsh
 ```
 
-This symlinks all the files in the "Shell" directory to your machine
+This symlinks all the files in the "zsh" directory to your machine
 
 If you see the following error
 
 ```
-WARNING! stowing Shell would cause conflicts:
+WARNING! stowing zsh would cause conflicts:
 ...
 ```
 
 Instead run
 ```
-stow Shell --adopt
+stow zsh --adopt
 ```
 This will move any conflicting files into this repo before symlinking.
 From there, either:
@@ -45,6 +45,7 @@ Here's a list of things you have to install for the config to work properly
    | [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) | My shell of choice |
    | [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md) | Fish-like suggestions for zsh |
    | [zsh-vi-mode](https://github.com/jeffreytse/zsh-vi-mode?tab=readme-ov-file#%EF%B8%8F-installation) | Better vi mode for zsh |
+   | [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md) | Syntax highlighting for zsh |
    | [Oh My Posh](https://ohmyposh.dev/docs/installation/macos) | Prompt Engine |
    | [zoxide](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation) | Better cd |
    | [fzf](https://github.com/junegunn/fzf#installation) | Fuzzy finder, needed for many other packages |
