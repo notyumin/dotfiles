@@ -1,9 +1,17 @@
 # My Setup
 
-- Editor: Neovim with [LazyVim](https://github.com/LazyVim/LazyVim)
+I have 2 main workstation setups:
+1. Macbook Air running MacOS
+2. Old laptop running Fedora with Sway
+
+![Fedora Setup Screenshot 1](./fedora_setup_1.png)
+![Fedora Setup Screenshot 2](./fedora_setup_2.png)
+
+- Editor: Neovim (My own config based on [MiniMax](https://nvim-mini.org/MiniMax/))
 - Shell: zsh with [Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh)
-- Terminal: [Wezterm](https://github.com/wez/wezterm) and Foot
-- WM: Sway (on Fedora machine)
+- Terminal: [Wezterm](https://github.com/wez/wezterm) and [Foot](https://codeberg.org/dnkl/foot)
+- Multiplexor: [tmux](https://github.com/tmux/tmux)
+- Colorscheme: Mostly Tokyonight Storm and Catppuccin Macchiato
 
 Dots managed by [GNU Stow](https://www.gnu.org/software/stow/)
 
