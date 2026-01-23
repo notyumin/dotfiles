@@ -160,6 +160,10 @@ now_if_args(function()
   require("mason-lspconfig").setup()
 end)
 
+now_if_args(function ()
+  add('tpope/vim-fugitive')
+end)
+
 -- Beautiful, usable, well maintained color schemes outside of 'mini.nvim' and
 -- have full support of its highlight groups. Use if you don't like 'miniwinter'
 -- enabled in 'plugin/30_mini.lua' or other suggested 'mini.hues' based ones.
