@@ -7,7 +7,7 @@
     "display": {
         "separator": "",
         "key": {
-            "width": 15
+            "width": 12
         }
     },
     "modules": [
@@ -19,64 +19,62 @@
             "keyColor": "31"
         },
         {
-            "key": "󰇅 hname",
-            "type": "title",
-            "format": "{host-name}",
+            "key": "{icon} distro",
+            "type": "os",
+            "format": "{pretty-name}",
             "keyColor": "32"
-
         },
         {
-            "key": "󰅐 uptime",
-            "type": "uptime",
+            "type": "wm",
+            "key": " wm",
+            "format": "{pretty-name}",
             "keyColor": "33"
         },
         {
-            "key": "{icon} distro",
-            "type": "os",
-            "keyColor": "34"
-        },
-        {
-            "key": " kernel",
-            "type": "kernel",
-            "keyColor": "35"
-        },
-        {
-            "key": "󰇄 desktop",
             "type": "de",
-            "keyColor": "36"
+            "key": " de",
+            "format": "{pretty-name}",
+            "keyColor": "34"
         },
         {
             "key": " term",
             "type": "terminal",
-            "keyColor": "31"
+            "format": "{pretty-name}",
+            "keyColor": "35"
         },
         {
             "key": " shell",
             "type": "shell",
-            "keyColor": "32"
+            "format": "{pretty-name}",
+            "keyColor": "36"
+        },
+        {
+            "key": "󰌢 host",
+            "type": "host",
+            "keyColor": "31"
+
         },
         {
             "key": "󰍛 cpu",
             "type": "cpu",
             "showPeCoreCount": true,
-            "keyColor": "33"
+            "keyColor": "32"
         },
         {
             "key": "󰉉 disk",
             "type": "disk",
             "folders": "/",
-            "keyColor": "34"
+            "keyColor": "33"
         },
         {
             "key": " memory",
             "type": "memory",
-            "keyColor": "35"
+            "keyColor": "34"
         },
         {
-            "key": "󰩟 network",
-            "type": "localip",
-            "format": "{ipv4} ({ifname})",
-            "keyColor": "36"
+            "key": "󰅐 uptime",
+            "type": "uptime",
+            "keyColor": "35"
         },
         {
             "key": " colors",
