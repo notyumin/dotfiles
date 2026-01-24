@@ -129,6 +129,9 @@ exec wl-paste --watch cliphist store
     bindsym $mod+Shift+c exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
     bindsym $mod+Shift+d exec cliphist list | rofi -dmenu | cliphist delete
 
+    # Hyprpicker
+    bindsym $mod+Shift+p exec hyprpicker -a
+
 # Moving around:
 #
     # Move your focus around
