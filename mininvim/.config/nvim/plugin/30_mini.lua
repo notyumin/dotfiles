@@ -387,6 +387,10 @@ later(function()
     vim.bo[ev.buf].omnifunc = 'v:lua.MiniCompletion.completefunc_lsp'
   end
   _G.Config.new_autocmd('LspAttach', nil, on_attach, "Set 'omnifunc'")
+  local set_goto_lsp_definition = function()
+    vim.keymap.set('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', { desc = "LSP Definition" })
+  end
+  _G.Config.new_autocmd('LspAttach', nil, set_goto_lsp_definition, "Set LSP Goto")
 
   -- Advertise to servers that Neovim now supports certain set of completion and
   -- signature features through 'mini.completion'.
