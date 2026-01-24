@@ -17,7 +17,7 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 # Recommends: foot
-set $term foot
+set $term wezterm
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -73,6 +73,10 @@ output * bg ~/dotfiles/wallpapers/frieren_mana.jpg fill
 input type:keyboard {
     # Swap Caps Lock and Control keys
     xkb_options ctrl:swapcaps
+
+    # Faster repeat speed/delay
+    repeat_delay 300
+    repeat_rate 20
 }
 
 ### Styling
@@ -113,8 +117,11 @@ client.background        $base
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    # Open wlogout menu
+    bindsym $mod+Shift+e exec wlogout
+
+    # Screenshot
+    bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
 #
 # Moving around:
 #
