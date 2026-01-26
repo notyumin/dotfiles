@@ -69,7 +69,6 @@ output * bg ~/dotfiles/wallpapers/frieren_mana.jpg fill
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-# Sway ctrl and caps
 input type:keyboard {
     # Swap Caps Lock and Control keys
     xkb_options ctrl:swapcaps
@@ -93,6 +92,9 @@ client.urgent            $peach    $base $peach $overlay0  $peach
 client.placeholder       $overlay0 $base $text  $overlay0  $clear
 client.background        $base
 
+# Start cliphist
+exec wl-paste --watch cliphist store
+
 ### Key bindings
 #
 # Basics:
@@ -115,14 +117,21 @@ client.background        $base
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+r reload
 
     # Open wlogout menu
     bindsym $mod+Shift+e exec wlogout
 
     # Screenshot
     bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
-#
+
+    # Cliphist
+    bindsym $mod+Shift+c exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
+    bindsym $mod+Shift+d exec cliphist list | rofi -dmenu | cliphist delete
+
+    # Hyprpicker
+    bindsym $mod+Shift+p exec hyprpicker -a
+
 # Moving around:
 #
     # Move your focus around
