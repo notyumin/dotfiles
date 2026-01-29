@@ -1,5 +1,5 @@
 # Environment Variables
-export ASDF_DATA_DIR=/home/allinav/.asdf
+export ASDF_DATA_DIR=~/.asdf
 export PATH=$ASDF_DATA_DIR/shims:$PATH:/usr/local/go/bin:~/.local/bin:~/go/bin
 
 # Vi mode
@@ -34,3 +34,11 @@ function yy() {
 }
 
 [ -f "/home/allinav/.ghcup/env" ] && . "/home/allinav/.ghcup/env" # ghcup-env
+
+echo ".                                             ." | fmt -c -w $COLUMNS
+echo ".     What a wonderful thought it is          ." | fmt -c -w $COLUMNS
+echo ".       that some of the best days of our     ." | fmt -c -w $COLUMNS
+echo ".         lives haven't even happened yet     ." | fmt -c -w $COLUMNS
+echo ".                                             ." | fmt -c -w $COLUMNS
+echo ".                         ~ Anne Frank        ." | fmt -c -w $COLUMNS
+
