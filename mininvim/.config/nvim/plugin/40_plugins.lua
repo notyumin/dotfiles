@@ -155,7 +155,7 @@ later(function() add('rafamadriz/friendly-snippets') end)
 -- You can use it like so:
 now_if_args(function()
   add('mason-org/mason.nvim')
-  add('mason-org/mason-lspconfig.nvim')
+  add({ source = 'mason-org/mason-lspconfig.nvim', depends = { "mason-org/mason.nvim" }})
   require('mason').setup()
   require("mason-lspconfig").setup()
 end)
@@ -169,6 +169,23 @@ now_if_args(function ()
   require('gitblame').setup {
     enabled = false,
 }
+end)
+
+now_if_args(function ()
+  add('nvim-lua/plenary.nvim')
+  add({
+    source = 'mikavilpas/yazi.nvim',
+    depends = { "nvim-lua/plenary.nvim" }
+  })
+  require("yazi").setup({
+    open_for_directories = true,
+    keymaps = {
+      show_help = "<f1>",
+    },
+  })
+  -- Disable netrw
+  vim.g.loaded_netrwPlugin = 1
+
 end)
 
 -- Beautiful, usable, well maintained color schemes outside of 'mini.nvim' and

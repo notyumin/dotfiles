@@ -124,6 +124,8 @@ nmap_leader('ef', explore_at_file,                          'File directory')
 nmap_leader('en', '<Cmd>lua MiniNotify.show_history()<CR>', 'Notifications')
 nmap_leader('eq', explore_quickfix,                         'Quickfix list')
 nmap_leader('eQ', explore_locations,                        'Location list')
+nmap_leader('ey' ,'<cmd>Yazi<cr>',                          'Yazi')
+
 
 -- c is for config
 nmap_leader('ci', '<Cmd>edit $MYVIMRC<CR>',                 'init.lua')
