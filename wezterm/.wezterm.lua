@@ -8,6 +8,7 @@ local config = wezterm.config_builder()
 
 config.color_scheme = "Catppuccin Macchiato"
 
+config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
 
 config.font_size = 15
