@@ -136,7 +136,8 @@ nmap_leader('ck', edit_plugin_file('20_keymaps.lua'),       'Keymaps config')
 nmap_leader('cm', edit_plugin_file('30_mini.lua'),          'MINI config')
 nmap_leader('co', edit_plugin_file('10_options.lua'),       'Options config')
 nmap_leader('cp', edit_plugin_file('40_plugins.lua'),       'Plugins config')
-nmap_leader('cl', '<Cmd>Mason<CR>',                         'Manage LSP (Mason)')
+nmap_leader('cl', '<Cmd>Mason<CR>',                         'Manage [L]SP (Mason)')
+nmap_leader('ct', '<Cmd>Copilot toggle<CR>',                'Toggle Copilot [T]ab Completion')
 
 -- f is for 'Fuzzy Find'. Common usage:
 -- - `<Leader>ff` - find files; for best performance requires `ripgrep`

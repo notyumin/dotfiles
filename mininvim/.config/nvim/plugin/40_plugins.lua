@@ -160,6 +160,7 @@ now_if_args(function()
   require("mason-lspconfig").setup()
 end)
 
+
 now_if_args(function ()
   add('tpope/vim-fugitive')
 end)
@@ -185,7 +186,39 @@ now_if_args(function ()
   })
   -- Disable netrw
   vim.g.loaded_netrwPlugin = 1
+end)
 
+now_if_args(function ()
+  add({
+    source = 'zbirenbaum/copilot.lua',
+    depends = { 'nvim-lua/plenary.nvim' },
+  })
+
+  require('copilot').setup({
+    suggestion = {
+      enabled = true,
+      auto_trigger = true,
+      debounce = 75,
+      keymap = {
+        accept = false,
+        next = '<M-]>',
+        prev = '<M-[>',
+        dismiss = '<C-e>',
+      },
+    },
+    panel = { enabled = false },
+  })
+
+  -- Only accept copilot suggestion with <Tab> if it is visible
+  -- Otherwise, use <Tab> as normal
+  local copilot_suggestion = require('copilot.suggestion')
+  vim.keymap.set('i', '<Tab>', function()
+    if copilot_suggestion.is_visible() then
+      copilot_suggestion.accept()
+    else
+      vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-t>', true, true, true))
+    end
+  end, { expr = false, silent = true, desc = 'Copilot accept or tab' })
 end)
 
 -- Beautiful, usable, well maintained color schemes outside of 'mini.nvim' and
