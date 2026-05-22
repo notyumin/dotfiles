@@ -1,6 +1,7 @@
 # Environment Variables
 export ASDF_DATA_DIR=~/.asdf
 export PATH=$ASDF_DATA_DIR/shims:$PATH:/usr/local/go/bin:~/.local/bin:~/go/bin
+export EDITOR=nvim
 
 # Vi mode
 source $HOME/.zsh-vi-mode/zsh-vi-mode.plugin.zsh
