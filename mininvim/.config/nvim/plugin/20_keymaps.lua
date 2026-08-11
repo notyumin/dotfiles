@@ -62,6 +62,7 @@ end, { expr = true, desc = "Escape and Clear hlsearch" })
 _G.Config.leader_group_clues = {
   { mode = 'n', keys = '<Leader>b', desc = '+Buffer' },
   { mode = 'n', keys = '<Leader>c', desc = '+Config' },
+  { mode = 'n', keys = '<Leader>cT', desc = '+Set Tab Width' },
   { mode = 'n', keys = '<Leader>e', desc = '+Explore' },
   { mode = 'n', keys = '<Leader>f', desc = '+Find' },
   { mode = 'n', keys = '<Leader>g', desc = '+Git' },
@@ -138,6 +139,17 @@ nmap_leader('co', edit_plugin_file('10_options.lua'),       'Options config')
 nmap_leader('cp', edit_plugin_file('40_plugins.lua'),       'Plugins config')
 nmap_leader('cl', '<Cmd>Mason<CR>',                         'Manage [L]SP (Mason)')
 nmap_leader('ct', '<Cmd>Copilot toggle<CR>',                'Toggle Copilot [T]ab Completion')
+nmap_leader('cT2', function ()
+  vim.opt.tabstop = 2
+  vim.opt.shiftwidth = 2
+  vim.opt.softtabstop = 2
+end, 'Set tab width to 2')
+nmap_leader('cT4', function ()
+  vim.opt.tabstop = 4
+  vim.opt.shiftwidth = 4
+  vim.opt.softtabstop = 4
+end, 'Set tab width to 4')
+
 
 -- f is for 'Fuzzy Find'. Common usage:
 -- - `<Leader>ff` - find files; for best performance requires `ripgrep`
