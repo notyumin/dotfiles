@@ -96,7 +96,6 @@ end)
 -- Add it now if file (and not 'mini.starter') is shown after startup.
 now_if_args(function()
   add('neovim/nvim-lspconfig')
-
   -- Use `:h vim.lsp.enable()` to automatically enable language server based on
   -- the rules provided by 'nvim-lspconfig'.
   -- Use `:h vim.lsp.config()` or 'after/lsp/' directory to configure servers.
@@ -159,7 +158,6 @@ now_if_args(function()
   require('mason').setup()
   require("mason-lspconfig").setup()
 end)
-
 
 now_if_args(function ()
   add('tpope/vim-fugitive')

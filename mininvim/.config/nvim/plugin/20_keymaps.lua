@@ -100,6 +100,7 @@ local new_scratch_buffer = function()
 end
 
 nmap_leader('bb', '<Cmd>b#<CR>',                                 'Alternate')
+nmap_leader('bc', '<Cmd>cclose<CR>',                             'Close Quickfix')
 nmap_leader('bd', '<Cmd>lua MiniBufremove.delete()<CR>',         'Delete')
 nmap_leader('bD', '<Cmd>lua MiniBufremove.delete(0, true)<CR>',  'Delete!')
 nmap_leader('bo', '<Cmd>%bdelete|edit#|bdelete#<CR>',            'Delete all other buffers')
@@ -132,6 +133,8 @@ nmap_leader('ey' ,'<cmd>Yazi<cr>',                          'Yazi')
 
 
 -- c is for config
+local rhs = '<Cmd>lua MiniAnimate.config.scroll.enable = not MiniAnimate.config.scroll.enable<CR>'
+nmap_leader('ca', rhs,                                      'Toggle scroll animation')
 nmap_leader('ci', '<Cmd>edit $MYVIMRC<CR>',                 'init.lua')
 nmap_leader('ck', edit_plugin_file('20_keymaps.lua'),       'Keymaps config')
 nmap_leader('cm', edit_plugin_file('30_mini.lua'),          'MINI config')
