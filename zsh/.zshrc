@@ -12,6 +12,9 @@ source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Aliases
 alias ls="eza --icons=always"
+alias ll="eza --icons=always -lah"
+alias filesize="du -sh * | sort -hr"
+alias reload="clear && source ~/.zshrc"
 
 # zoxide, oh-my-posh
 eval "$(zoxide init --cmd cd zsh)"
